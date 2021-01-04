@@ -11,6 +11,9 @@
   font-family: "Open Sans Condensed";
   font-weight: 700;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.2s;
 
@@ -26,6 +29,18 @@
 
     &:hover {
       background-color: #357ae8;
+      border: none;
+    }
+  }
+
+  &.inverted {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+
+    &:hover {
+      background-color: #000;
+      color: #fff;
       border: none;
     }
   }
