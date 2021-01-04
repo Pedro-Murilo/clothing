@@ -60,6 +60,7 @@ const SHOP_DATA = [
       },
     ],
   },
+
   {
     id: 2,
     title: "Sneakers",
@@ -115,6 +116,7 @@ const SHOP_DATA = [
       },
     ],
   },
+
   {
     id: 3,
     title: "Jackets",
