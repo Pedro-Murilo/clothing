@@ -6,40 +6,40 @@ import { selectCartItems, selectCartTotal } from '../../redux/cart/cart-selector
 import CheckoutItem from '../../components/checkout-item/checkout-item';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button';
 
-import './checkout.scss';
+import { CheckoutPageContainer, CheckoutHeader, TotalDiv, TestWarning, HeaderBlock } from './checkout-styles';
 
 const CheckoutPage = ({ cartItems, total }) => (
-    <div className="checkout-page">
-        <div className="checkout-header">
-            <div className="header-block">
+    <CheckoutPageContainer>
+        <CheckoutHeader >
+            <HeaderBlock>
                 <span>Product</span>
-            </div>
-            <div className="header-block">
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Description</span>
-            </div>
-            <div className="header-block">
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Quantity</span>
-            </div>
-            <div className="header-block">
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Price</span>
-            </div>
-            <div className="header-block">
+            </HeaderBlock>
+            <HeaderBlock>
                 <span>Remove</span>
-            </div>
-        </div>
+            </HeaderBlock>
+        </CheckoutHeader>
         {
             cartItems.map(cartItem => 
                 <CheckoutItem key={cartItem.id} cartItem={cartItem}/>    
             )
         }
-        <div className="total">TOTAL: ${total}</div>
-        <div className="test-warning">
+        <TotalDiv>TOTAL: ${total}</TotalDiv>
+        <TestWarning>
             Use the following test credit card for payment
             <br />
             4242 4242 4242 4242 - Exp: 01/22 - CVV: 123
-        </div>  
+        </TestWarning>  
         <StripeCheckoutButton price={total} />
-    </div>
+    </CheckoutPageContainer>
 )
 
 const mapStateToProps = createStructuredSelector({
