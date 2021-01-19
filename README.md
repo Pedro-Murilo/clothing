@@ -18,5 +18,12 @@ I have used a lot of technologies. This project made me understand so much of Re
 - Styled Components
 - Yarn
 
+### 📲 How to run this project:
+> Step 1: clone this project typing in your terminal `git clone git@github.com:Pedro-Murilo/clothing.git`
+
+> Step 2: now, install the dependencies typing `yarn` and wait install all dependencies
+
+> Step 3: after install all dependencies, run `yarn start` and wait the project open on `localhost:3000`
+
 ### 💜 Credits
-This project was built in this [course](https://www.udemy.com/course/complete-react-developer-zero-to-mastery/),
+This project was built in this [course](https://www.udemy.com/course/complete-react-developer-zero-to-mastery/)
